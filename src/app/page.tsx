@@ -5,6 +5,7 @@ import Image from 'next/image'
 import {buttonVariants} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
 import {FaDiscord, FaGithub, FaLinkedin, FaTwitter} from "react-icons/fa6";
+import Footer from "@/components/project/footer";
 
 export default async function Home() {
     return (
@@ -57,9 +58,8 @@ export default async function Home() {
                 </Link>
             </div>
 
-
-
-
+            <div className={"w-2 h-[33vh]"}/>
+            <Footer/>
         </main>
     );
 }
