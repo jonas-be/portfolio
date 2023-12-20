@@ -3,8 +3,6 @@ import React from "react";
 import {buttonVariants} from "@/components/ui/button";
 import Link from "next/link";
 import {cn} from "@/lib/utils";
-import Image from 'next/image'
-
 
 export default function Header() {
     return (

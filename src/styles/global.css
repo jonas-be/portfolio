@@ -67,22 +67,18 @@
   }
 }
 
-body {
-  background-color: #000000;
-}
-
 .bubble {
  @apply
-  bg-primary opacity-60 dark:opacity-90 rounded-full absolute w-[5rem] h-[7.5rem] right-[35vw] md:left-[35vw] top-[25rem] md:top-[16rem] -rotate-45 blur-[3.5rem]
+  bg-primary opacity-60 dark:opacity-90 rounded-full absolute w-[5rem] h-[7.5rem] right-[20vw] md:left-[35vw] top-[25rem] md:top-[16rem] -rotate-45 blur-[3.5rem]
 }
 
 
 .bubble2 {
   @apply
-  bg-secondary/70 opacity-40 dark:opacity-80 rounded-full absolute w-[5rem] h-[7.5rem] right-[30vw] md:left-[30vw] top-[30rem] md:top-[21rem] rotate-45 blur-[2.5rem]
+  bg-secondary/70 opacity-40 dark:opacity-80 rounded-full absolute w-[5rem] h-[7.5rem] right-[15vw] md:left-[30vw] top-[30rem] md:top-[21rem] rotate-45 blur-[2.5rem]
 }
 
 .bubble-bg {
   @apply
-  bg-primary  rounded-full absolute w-[5rem] h-[7.5rem] right-[33vw] md:left-[33vw] top-[27rem] md:top-[18rem] -rotate-45 blur-[10rem]
+  bg-primary  rounded-full absolute w-[5rem] h-[7.5rem] right-[18vw] md:left-[33vw] top-[27rem] md:top-[18rem] -rotate-45 blur-[10rem]
 }
