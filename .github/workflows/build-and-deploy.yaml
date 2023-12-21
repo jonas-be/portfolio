@@ -36,14 +36,3 @@ jobs:
         uses: azure/setup-kubectl@v3
         with:
           version: latest
-
-      - name: Download kubeconfig
-        run: |
-          mkdir $HOME/.kube
-          echo '${{ secrets.KUBECONFIG }}' >> $HOME/.kube/config
-
-      - name: Deploy to cluster
-        run: |
-          kubectl create namespace joansbe-portfolio
-          kubectl apply -f kubernetes/deployment.yaml
-          kubectl rollout restart deployment portfolio --namespace=jonasbe-portfoliod
