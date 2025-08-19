@@ -25,7 +25,7 @@ export default async function Home() {
                         <span
                             className="text-5xl  drop-shadow-[0_0_0.3rem_#00000030] dark:drop-shadow-[0_0_0.3rem_#ffffff70]">Jonas Bender</span>
                     </h1>
-                    <p className="mt-4 text-lg">19 y/o DevOps Engineer from Germany</p>
+                    <p className="mt-4 text-lg">20 y/o DevOps Engineer from Germany</p>
 
                 </div>
                 <Image
