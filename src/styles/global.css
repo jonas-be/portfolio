@@ -1,8 +1,61 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-sm: calc(var(--radius) - 10px);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+  }
+}
 
 @layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: hsl(var(--border));
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 224 71.4% 4.1%;
@@ -49,36 +102,14 @@
   }
 }
 
-@layer components {
-  .border {
-    @apply border-border;
-  }
-  .border-b {
-    @apply border-border;
-  }
-  .border-t {
-    @apply border-border;
-  }
-  .border-r {
-    @apply border-border;
-  }
-  .border-l {
-    @apply border-border;
-  }
-}
-
 .bubble {
- @apply
-  bg-primary opacity-60 dark:opacity-90 rounded-full absolute w-[5rem] h-[7.5rem] right-[20vw] md:left-[35vw] top-[25rem] md:top-[16rem] -rotate-45 blur-[3.5rem]
+  @apply bg-primary opacity-60 dark:opacity-90 rounded-full absolute w-[5rem] h-[7.5rem] right-[20vw] md:left-[35vw] top-[25rem] md:top-[16rem] -rotate-45 blur-[3.5rem];
 }
-
 
 .bubble2 {
-  @apply
-  bg-secondary/70 opacity-40 dark:opacity-80 rounded-full absolute w-[5rem] h-[7.5rem] right-[15vw] md:left-[30vw] top-[30rem] md:top-[21rem] rotate-45 blur-[2.5rem]
+  @apply bg-secondary/70 opacity-40 dark:opacity-80 rounded-full absolute w-[5rem] h-[7.5rem] right-[15vw] md:left-[30vw] top-[30rem] md:top-[21rem] rotate-45 blur-[2.5rem];
 }
 
 .bubble-bg {
-  @apply
-  bg-primary  rounded-full absolute w-[5rem] h-[7.5rem] right-[18vw] md:left-[33vw] top-[27rem] md:top-[18rem] -rotate-45 blur-[10rem]
+  @apply bg-primary rounded-full absolute w-[5rem] h-[7.5rem] right-[18vw] md:left-[33vw] top-[27rem] md:top-[18rem] -rotate-45 blur-[10rem];
 }
