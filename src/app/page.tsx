@@ -51,11 +51,6 @@ export default async function Home() {
                       href="https://discordapp.com/users/398876120696619008/" target={"_blank"}>
                     <FaDiscord className={"w-5 h-5 text-[#5865f2]"}/><span className={"hidden md:block"}>Jonas_be</span>
                 </Link>
-
-                <Link className={cn(buttonVariants({variant: "outline", size: "default", className: "flex gap-2"}))}
-                      href="https://twitter.com/JonasBe_/" target={"_blank"}>
-                    <FaTwitter className={"w-5 h-5 text-[#1da1f2]"}/><span className={"hidden md:block"}>JonasBe_</span>
-                </Link>
             </div>
 
             <div className={"w-2 h-[33vh]"}/>
